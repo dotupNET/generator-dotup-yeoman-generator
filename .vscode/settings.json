@@ -4,6 +4,10 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
+    "npm.exclude": [
+      "generators/",
+      "src/**/templates/"
+    ],
   // mocha
   "mocha.options": {
     "compilers": "ts-node/register"

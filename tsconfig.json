@@ -4,6 +4,7 @@
   ],
   "exclude": [
     "src/sample.ts",
+    "src/**/templates/**/*.ts",
     "spec",
     "test",
     "node_modules",
@@ -11,6 +12,12 @@
     "src/**/*.spec.ts"
   ],
   "compilerOptions": {
+    "paths": {
+      "global-modules-path": [
+        "types/global-modules-path.d.ts"
+      ]
+    },
+    "baseUrl": ".",
     /* Basic Options */
     "target": "es2017",                       /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
     "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
@@ -22,7 +29,7 @@
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     "sourceMap": true,                        /* Generates corresponding '.map' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
-    "outDir": "dist",                         /* Redirect output structure to the directory. */
+    "outDir": "generators",                         /* Redirect output structure to the directory. */
     "rootDir": "src",                         /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
    // "composite": true,                      /* Enable project compilation */
     // "removeComments": true,                /* Do not emit comments to output. */

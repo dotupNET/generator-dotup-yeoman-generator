@@ -1,3 +1,3 @@
-import { MyGenerator } from './MyGenerator';
+import { YeomanGeneratorGenerator } from './YeomanGeneratorGenerator';
 
-module.exports = MyGenerator;
+module.exports = YeomanGeneratorGenerator;

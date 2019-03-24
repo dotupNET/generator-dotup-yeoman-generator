@@ -50,13 +50,4 @@ export class MyGenerator extends BaseGenerator<MyGeneratorQuestions> {
       this.logGreen(`Well ${this.answers.yourName}, not a nice day.`);
     }
   }
-
-  async install(): Promise<void> {
-    if (this.skipGenerator) { return; }
-  }
-
-  async end(): Promise<void> {
-    if (this.skipGenerator) { return; }
-  }
-
 }
