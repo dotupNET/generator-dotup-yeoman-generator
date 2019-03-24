@@ -11,18 +11,18 @@
     "generator"
   ],
   "dependencies": {
-    "dotup-typescript-yeoman-generators": "^0.4.0",
-    "generator-dotup-npm-package": "^0.1.6",
-    "generator-dotup-typescript": "^0.2.9",
-    "generator-dotup-git": "^1.3.4",
-    "generator-dotup-github": "^1.3.4",
+    "dotup-typescript-yeoman-generators": "^0.4.2",
+    "generator-dotup-npm-package": "^0.1.7",
+    "generator-dotup-typescript": "^0.2.10",
+    "generator-dotup-git": "^1.3.5",
+    "generator-dotup-github": "^1.3.6",
     "global-modules-path": "^2.3.1",
     "yeoman-generator": "^3.2.0",
     "chalk": "^2.4.2",
     "yosay": "^2.0.2"
   },
   "devDependencies": {
-    "@types/yeoman-generator": "3.1.0",
+    "@types/yeoman-generator": "3.1.1",
     "yeoman-test": "^1.9.1",
     "yeoman-assert": "^3.1.1",
     "cross-spawn": "^6.0.5",

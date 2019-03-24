@@ -17,7 +17,7 @@ export class YeomanGeneratorGenerator extends BaseGenerator<YeomanGeneratorGener
     // Do not ejs this files
     this.addSkipEjsReplacement(`src\\app\\templates\\package.json`);
 
-    (<IProperty>this.answers).yoCli = globalModulesPath.getPath('yo').replace(/\\/g, '/');
+    this.answers.yoCli = globalModulesPath.getPath('yo').replace(/\\/g, '/');
   }
 
   async initializing(): Promise<void> {
@@ -31,15 +31,19 @@ export class YeomanGeneratorGenerator extends BaseGenerator<YeomanGeneratorGener
         validate: (v: string) => {
           if (!v.startsWith('generator-')) {
             v = `generator-${v}`;
-            this.logRed(`Generators musst start with 'generator-'. Use ${v}`);
-            return false;
+            this.logYellow(`Generators musst start with 'generator-'. Project name changed to ${v}.`);
+            return true;
+            // this.logRed(`Generators musst start with 'generator-'. Use ${v}`);
+            // return false;
           }
 
           return this.validateString(v);
         },
-        acceptAnswer: v => {
-          // TODO: Extendable enum..
-          (<IProperty>this.answers).yoName = v.toString().replace('generator-', '');
+        acceptAnswer: (v: string) => {
+          if (!v.startsWith('generator-')) {
+            this.answers.projectName = `generator-${v}`;
+          }
+          this.answers.yoName = this.answers.projectName.replace('generator-', '');
           return true;
         }
       })
@@ -114,7 +118,8 @@ export class YeomanGeneratorGenerator extends BaseGenerator<YeomanGeneratorGener
         [TypescriptQuestions.sourcePath]: 'src',
         [TypescriptQuestions.targetPath]: 'generators',
         [TypescriptQuestions.testPath]: 'test',
-        [TypescriptQuestions.docsPath]: 'docs'
+        [TypescriptQuestions.docsPath]: 'docs',
+        'skippedTemplateFiles': ['src/app.ts']
       }
     );
 

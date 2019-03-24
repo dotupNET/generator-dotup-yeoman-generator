@@ -1,4 +1,7 @@
+tmp/
+temp/
 test/
+spec/
 play/
 tools/
 coverage/
@@ -9,7 +12,6 @@ src/spec/
 src/test/
 dist/spec/
 dist/sample.js
-spec/
 docs/
 scripts/
 .vscode

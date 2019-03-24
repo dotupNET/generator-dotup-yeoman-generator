@@ -1,5 +1,7 @@
 {
   "name": "<%= projectName %>",
+  "main": "<%= targetPath %>/app/<%= mainFile %>",
+  "types": "<%= targetPath %>/app/<%= typesFile %>",
   "keywords": [
     "yeoman",
     "generator"

@@ -8,6 +8,8 @@ export enum YeomanGeneratorGeneratorQuestions {
   projectName = 'projectName',
   invalidProjectName = 'invalidProjectName',
   createFolder = 'createFolder',
+  yoCli = 'yoCli',
+  yoName = 'yoName',
   useGit = 'useGit',
   useGithub = 'useGithub'
 }
