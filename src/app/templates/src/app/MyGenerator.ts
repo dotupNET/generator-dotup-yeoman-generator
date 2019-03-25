@@ -5,6 +5,15 @@ export enum MyGeneratorQuestions {
   niceDay = 'niceDay'
 }
 
+/**
+ * To start your generator, follow these steps:
+ * 
+ * 1. Install dependencies
+ * 2. Build Project (Run gulp task Project)
+ * 3. Open terminal and run 'npm link'
+ * 4. Press F5 to run your generator
+ * 
+ */
 export class MyGenerator extends BaseGenerator<MyGeneratorQuestions> {
 
   constructor(args: string | string[], options: GeneratorOptions<MyGeneratorQuestions>) {

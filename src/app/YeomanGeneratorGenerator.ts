@@ -1,7 +1,7 @@
 import { BaseGenerator, GeneratorOptions, SharedOptions, Question, InquirerQuestionType, IProperty, ProjectType, ConfirmQuestion, StoreQuestion } from 'dotup-typescript-yeoman-generators';
 import _ from 'lodash';
-import { TypescriptGenerator } from 'generator-dotup-typescript/generators/ts/TypescriptGenerator';
 import { TypescriptQuestions } from 'generator-dotup-typescript/generators/ts/TypescriptQuestions';
+import { GulpQuestions } from 'generator-dotup-gulp/generators/app/GulpGenerator';
 import validateNpmPackageNameTyped from 'validate-npm-package-name-typed';
 import globalModulesPath from 'global-modules-path';
 import { YeomanGeneratorGeneratorQuestions } from './YeomanGeneratorGeneratorQuestions';
@@ -110,16 +110,18 @@ export class YeomanGeneratorGenerator extends BaseGenerator<YeomanGeneratorGener
     await super.prompting();
 
     this.compose('generator-dotup-npm-package/generators/app');
+
     this.compose(
       'generator-dotup-typescript/generators/ts',
       true,
       {
-        [TypescriptQuestions.projectType]: ProjectType.app,
+        [TypescriptQuestions.projectType]: ProjectType.blank,
         [TypescriptQuestions.sourcePath]: 'src',
         [TypescriptQuestions.targetPath]: 'generators',
         [TypescriptQuestions.testPath]: 'test',
         [TypescriptQuestions.docsPath]: 'docs',
-        'skippedTemplateFiles': ['src/app.ts']
+        'skippedTemplateFiles': ['src/app.ts'],
+        'userName': this.tryGetAnswer(<any>'userName')
       }
     );
 
@@ -133,6 +135,17 @@ export class YeomanGeneratorGenerator extends BaseGenerator<YeomanGeneratorGener
       // Load git generator
       this.compose('generator-dotup-github/generators/app');
     }
+
+    this.compose(
+      'generator-dotup-gulp/generators/app',
+      true,
+      {
+        [GulpQuestions.sourcePath]: 'src',
+        [GulpQuestions.targetPath]: 'generators',
+        [GulpQuestions.testPath]: 'test',
+        [GulpQuestions.docsPath]: 'docs'
+      });
+
     // Typescript generator
     // this.composeWith(
     //   <any>{
