@@ -1,7 +1,5 @@
-tmp/
-temp/
 test/
-spec/
+tmp/
 play/
 tools/
 coverage/
@@ -12,6 +10,7 @@ src/spec/
 src/test/
 dist/spec/
 dist/sample.js
+spec/
 docs/
 scripts/
 .vscode
@@ -28,4 +27,4 @@ gulpfile.config.js
 gulpfile.js
 .yo-rc-json
 .eslintrc.json
-!generators/app/templates/**/*
+!generators/*/templates/*
