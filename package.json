@@ -1,5 +1,5 @@
 {
-  "version": "3.1.2",
+  "version": "3.3.0",
   "name": "generator-dotup-yeoman-generator",
   "author": {
     "name": "Peter Ullrich",
@@ -13,11 +13,11 @@
   "dependencies": {
     "dotup-typescript-yeoman-generators": "3.1.0",
     "yeoman-generator": "^3.2.0",
-    "generator-dotup-npm-package": "3.1.2",
-    "generator-dotup-typescript": "3.1.6",
-    "generator-dotup-git": "3.1.4",
-    "generator-dotup-github": "3.1.2",
-    "generator-dotup-gulp": "3.1.2",
+    "generator-dotup-npm-package": "3.3.0",
+    "generator-dotup-typescript": "3.3.0",
+    "generator-dotup-git": "3.3.0",
+    "generator-dotup-github": "3.3.0",
+    "generator-dotup-gulp": "3.3.0",
     "global-modules-path": "^2.3.1",
     "chalk": "^2.4.2",
     "yosay": "^2.0.2"
