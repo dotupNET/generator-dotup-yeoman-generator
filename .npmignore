@@ -28,3 +28,4 @@ gulpfile.config.js
 gulpfile.js
 .yo-rc-json
 .eslintrc.json
+!generators/app/templates/**/*
