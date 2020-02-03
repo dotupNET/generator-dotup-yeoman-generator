@@ -6,7 +6,7 @@
       "request": "launch",
       "name": "Yeoman generator",
       "envFile": "${workspaceFolder}/.env",
-      "cwd": "C:\\temp\\yo-test",
+      "cwd": "${workspaceFolder}",
       "program": "C:/Users/live/AppData/Roaming/npm/node_modules/yo/lib/cli.js",
       "args": [
         "dotup-yeoman-generator",
